@@ -1,6 +1,6 @@
-package part_one
+package hot100practice
 
-func twoSum01(nums []int, target int) []int {
+func TwoSum01(nums []int, target int) []int {
 	for i := 0; i < len(nums); i++ { // 使用 len() 获取切片长度
 		for j := i + 1; j < len(nums); j++ {
 			if nums[i]+nums[j] == target {
@@ -14,7 +14,7 @@ func twoSum01(nums []int, target int) []int {
 // 暴力枚举
 // for .. range .. 用法 通常于遍历数组、切片、映射（map）、字符串
 // i代表数组的索引 x代表该索引下的值
-func twoSum02(nums []int, target int) []int {
+func TwoSum02(nums []int, target int) []int {
 	for i, x := range nums {
 		for j := i + 1; j < len(nums); j++ {
 			if x+nums[j] == target {
@@ -26,7 +26,7 @@ func twoSum02(nums []int, target int) []int {
 }
 
 // 最优解法 哈希表
-func twoSum03(nums []int, target int) []int {
+func TwoSum03(nums []int, target int) []int {
 	hashTable := map[int]int{}
 	for i, x := range nums {
 		// hashTable[target-x] 如果存在该值 则返回该值在hash表中对应的key 赋值给p

@@ -1,8 +1,12 @@
-package part_one
+package hot100practice
 
 import "sort"
 
-func groupAnagrams(strs []string) [][]string {
+// 题目：字母异位词分组
+// 给你一个字符串数组，请你将字母异位词组合在一起并返回结果。
+// 字母异位词指由相同字母重新排列形成的字符串，例如 "eat"、"tea"、"ate"。
+// 返回结果中每个分组内的顺序、以及分组之间的顺序都不作要求。
+func GroupAnagrams(strs []string) [][]string {
 	mp := map[string][]string{}
 	for _, str := range strs {
 		s := []byte(str) // str是字符串类型 不可修改 需要改成byte数组类型

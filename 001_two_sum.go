@@ -34,7 +34,7 @@ func TwoSum03(nums []int, target int) []int {
 			return []int{p, i}
 		}
 		// 没有找到 就先将这组数和下标放进哈希表中
-		// key=数组下标 value=数组值
+		 // 将value当作key，index为value，后续hashTable[table - v]就可以直接返回索引
 		hashTable[x] = i
 	}
 	return nil
